@@ -279,6 +279,7 @@ MonoBehaviour:
   moveSpeed: 20
   jumpForce: 5
   rb: {fileID: 1366303224}
+  isGrounded: 0
 --- !u!136 &1366303226
 CapsuleCollider:
   m_ObjectHideFlags: 0
