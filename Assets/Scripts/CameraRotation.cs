@@ -22,10 +22,9 @@ public class CameraRotation : MonoBehaviour
         yaw += mouseX * rotationSpeed * Time.deltaTime;                 // 수평 회전
 
         pitch -= mouseY * rotationSpeed * Time.deltaTime;               // 수직 회전, -를 곱해 반전
-
+    
         pitch = Mathf.Clamp(pitch, -90f, 90f);                          // pitch가 90도 이상, -90도 이하로 회전하지 않도록 제한
 
         transform.rotation = Quaternion.Euler(pitch, yaw, 0f);          // 회전 적용
     }
 }
-

@@ -1,40 +1,32 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.UI;
 using UnityEngine;
 
 public class CapsuleMove : MonoBehaviour
 {
-    // Start is called before the first frame update
-
-    public float seed = 10;
-    void Start()
-    {
-        if(Input.GetKey(KeyCode.W))
-        {
-            transform.Translate(Vector3.forward * seed * Time.deltaTime);
-;       }
-
-        if (Input.GetKey(KeyCode.A))
-        {
-            transform.Translate(Vector3.left * seed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.S))
-        {
-            transform.Translate(Vector3.back * seed * Time.deltaTime);
-        }
-
-        if (Input.GetKey(KeyCode.D))
-        {
-            transform.Translate(Vector3.right * seed * Time.deltaTime);
-        }
-
-    }
+    public float speed = 5.0f;                      //이동속도
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKey(KeyCode.W))                 //GetKey로 키를 지속적으로 받아오기
+        {
+            transform.Translate(Vector3.forward * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.A))                 //GetKey로 키를 지속적으로 받아오기
+        {
+            transform.Translate(Vector3.left * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.S))                 //GetKey로 키를 지속적으로 받아오기
+        {
+            transform.Translate(Vector3.back * speed * Time.deltaTime);
+        }
+
+        if (Input.GetKey(KeyCode.D))                 //GetKey로 키를 지속적으로 받아오기
+        {
+            transform.Translate(Vector3.right * speed * Time.deltaTime);
+        }
     }
 }
